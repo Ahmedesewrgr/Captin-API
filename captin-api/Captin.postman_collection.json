@@ -1,0 +1,431 @@
+{
+	"info": {
+		"_postman_id": "3b8a17fc-8526-4101-b633-d02dd62db942",
+		"name": "Captin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43205867"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/auth/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Club Owner Ahmed\",\r\n  \"email\": \"owner@club.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"clubOwner\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{UR}}/auth/register",
+					"host": [
+						"{{UR}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"ahmed@amle.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{UR}}/auth/login",
+					"host": [
+						"{{UR}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjgxYWNiZmMzZmY2NDAyM2NhOGViNiIsImlhdCI6MTc1MTY1MzA2NywiZXhwIjoxNzUyMjU3ODY3fQ.TizVBqqgQS_P9b78fanceL3d0RlaH28ZXjxmg40zK-U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"ahmed@example.com\",\r\n  \"password\": \"123456\"\r\n}"
+				},
+				"url": {
+					"raw": "{{UR}}/auth/profile",
+					"host": [
+						"{{UR}}"
+					],
+					"path": [
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{UR}}/clubs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjgxYWNiZmMzZmY2NDAyM2NhOGViNiIsImlhdCI6MTc1MTY1MzA2NywiZXhwIjoxNzUyMjU3ODY3fQ.TizVBqqgQS_P9b78fanceL3d0RlaH28ZXjxmg40zK-U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Domyat Club\",\r\n  \"location\": \"New Damietta\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{UR}}/clubs",
+					"host": [
+						"{{UR}}"
+					],
+					"path": [
+						"clubs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{UR}}/clubs/mine",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjgxYWNiZmMzZmY2NDAyM2NhOGViNiIsImlhdCI6MTc1MTY1MzA2NywiZXhwIjoxNzUyMjU3ODY3fQ.TizVBqqgQS_P9b78fanceL3d0RlaH28ZXjxmg40zK-U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{UR}}/clubs/mine",
+					"host": [
+						"{{UR}}"
+					],
+					"path": [
+						"clubs",
+						"mine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{UR}}/captins",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjgxYWNiZmMzZmY2NDAyM2NhOGViNiIsImlhdCI6MTc1MTY1MzA2NywiZXhwIjoxNzUyMjU3ODY3fQ.TizVBqqgQS_P9b78fanceL3d0RlaH28ZXjxmg40zK-U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Captain Ahmed\",\r\n  \"specialty\": \"Strength\",\r\n  \"club\": \"68681d791529049842a5c998\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{UR}}/captins",
+					"host": [
+						"{{UR}}"
+					],
+					"path": [
+						"captins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{UR}}/captins/68681d791529049842a5c998",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjgxYWNiZmMzZmY2NDAyM2NhOGViNiIsImlhdCI6MTc1MTY1MzA2NywiZXhwIjoxNzUyMjU3ODY3fQ.TizVBqqgQS_P9b78fanceL3d0RlaH28ZXjxmg40zK-U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{UR}}/captins/68681d791529049842a5c998",
+					"host": [
+						"{{UR}}"
+					],
+					"path": [
+						"captins",
+						"68681d791529049842a5c998"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{UR}}/bookings",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjgxYWNiZmMzZmY2NDAyM2NhOGViNiIsImlhdCI6MTc1MTY1MzA2NywiZXhwIjoxNzUyMjU3ODY3fQ.TizVBqqgQS_P9b78fanceL3d0RlaH28ZXjxmg40zK-U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"captin\": \"68681a125904d9ac7866d8ad\",\r\n  \"club\": \"68681d791529049842a5c998\",\r\n  \"date\": \"2025-07-15T16:00:00.000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{UR}}/bookings",
+					"host": [
+						"{{UR}}"
+					],
+					"path": [
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{UR}}/captins/68681d791529049842a5c998",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjgxYWNiZmMzZmY2NDAyM2NhOGViNiIsImlhdCI6MTc1MTY1MzA2NywiZXhwIjoxNzUyMjU3ODY3fQ.TizVBqqgQS_P9b78fanceL3d0RlaH28ZXjxmg40zK-U",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{UR}}/captins/68681d791529049842a5c998",
+					"host": [
+						"{{UR}}"
+					],
+					"path": [
+						"captins",
+						"68681d791529049842a5c998"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{UR}}/bookings/686d60dc6d0762630c7fecc2/status",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmJlYzBmNzJmMzc1ZWQyZjE3ZjljNSIsImlhdCI6MTc1MTkwMzI1MCwiZXhwIjoxNzUyNTA4MDUwfQ.5cHKhmdb5kXqPELJ_3gZGtkjOoL1PeL6siszdhpMhuU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"confirmed\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{UR}}/bookings/686d60dc6d0762630c7fecc2/status",
+					"host": [
+						"{{UR}}"
+					],
+					"path": [
+						"bookings",
+						"686d60dc6d0762630c7fecc2",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{UR}}/bookings/slots?captinId=68681a125904d9ac7866d8ad&date=2025-07-15",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjgxYTEyNTkwNGQ5YWM3ODY2ZDhhZCIsImlhdCI6MTc1MTk5ODQwOCwiZXhwIjoxNzUyNjAzMjA4fQ.3Fz2PkGOa9wZF7LtgQbUVETOHY6SIeAKCUCxI5EyG6Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{UR}}/bookings/slots?captinId=68681a125904d9ac7866d8ad&date=2025-07-15",
+					"host": [
+						"{{UR}}"
+					],
+					"path": [
+						"bookings",
+						"slots"
+					],
+					"query": [
+						{
+							"key": "captinId",
+							"value": "68681a125904d9ac7866d8ad"
+						},
+						{
+							"key": "date",
+							"value": "2025-07-15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{UR}}/captins/me",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjgxYWNiZmMzZmY2NDAyM2NhOGViNiIsImlhdCI6MTc1MTY1MzA2NywiZXhwIjoxNzUyMjU3ODY3fQ.TizVBqqgQS_P9b78fanceL3d0RlaH28ZXjxmg40zK-U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"specialty\": \"Strength\",\r\n  \"club\": \"CLUB_ID\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{UR}}/captins/me",
+					"host": [
+						"{{UR}}"
+					],
+					"path": [
+						"captins",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/bookings/all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmJlYzBmNzJmMzc1ZWQyZjE3ZjljNSIsImlhdCI6MTc1MTkwMzI1MCwiZXhwIjoxNzUyNTA4MDUwfQ.5cHKhmdb5kXqPELJ_3gZGtkjOoL1PeL6siszdhpMhuU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/bookings/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"bookings",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/bookings/slots?captinId=68681a125904d9ac7866d8ad&date=2025-07-15",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/bookings/slots?captinId=68681a125904d9ac7866d8ad&date=2025-07-15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"bookings",
+						"slots"
+					],
+					"query": [
+						{
+							"key": "captinId",
+							"value": "68681a125904d9ac7866d8ad"
+						},
+						{
+							"key": "date",
+							"value": "2025-07-15"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
